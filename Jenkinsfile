@@ -18,7 +18,7 @@ pipeline {
             post {
                 success {
                     echo 'Now Archiving the Artifacts..... 2.0!!!'
-                    archiveArtifacts artifacts: '**/*.jar'
+                    archiveArtifacts artifacts: '**/*.jar', fingerprint: true
                 }
             }
         }
